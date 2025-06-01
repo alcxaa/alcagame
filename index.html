@@ -17,7 +17,7 @@
     color: #fff;
   }
   #game-container {
-    margin-top: 20px;
+    margin-top: 30px;
     user-select: none;
   }
   canvas {
@@ -51,6 +51,7 @@
     <canvas id="tetris"></canvas>
     <div id="info">
       <div>Skor: <span id="score">0</span></div>
+      <div>Skor Tertinggi: <span id="highscore">0</span></div>
       <div id="controls">
         <button id="startBtn">Play</button>
         <button id="pauseBtn">Pause</button>
@@ -68,7 +69,7 @@
   let blockSize;
 
   function resize() {
-    // Bikin ukuran block yang pas di layar, minimal 20px
+    // Bikin ukuran block yang pas di layar, minimal 100px
     const maxWidth = Math.min(window.innerWidth * 0.7, 360);
     const maxHeight = window.innerHeight * 0.8;
 
