@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/png" href="tetris.png" />
+  <title>Tetris</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      font-family: monospace;
+      color: #fff;
+      overflow: hidden;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    #game-container {
+      margin-top: 30px;
+      user-select: none;
+    }
+    canvas {
+      background: #111;
+      display: block;
+      margin: 0 auto;
+      border: 3px solid #444;
+      border-top-color: white;
+    }
+    #info {
+      margin-top: 12px;
+      text-align: center;
+    }
+    #controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    #controls button {
+      background: #222;
+      border: none;
+      color: #eee;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 32px;
+      flex: 1 1 30%;
+      max-width: 120px;
+    }
+    #controls button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="tetris"></canvas>
+    <div id="info">
+      <div>Skor: <span id="score">0</span></div>
+      <div>Skor Tertinggi: <span id="highscore">0</span></div>
+      <div id="controls">
+        <button id="startBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    // ... seluruh script-mu tetap sama, tidak ada yang diubah
+  </script>
+</body>
+</html>
